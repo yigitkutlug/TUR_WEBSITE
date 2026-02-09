@@ -32,7 +32,7 @@ Proje; web sitesi, admin paneli, mail gönderimi, form işlemleri ve güvenlik y
 
 ## 📁 Proje Yapısı
 
-
+```text
 yigitur-site/
 │
 ├── app.js              # Ana uygulama dosyası
@@ -45,7 +45,6 @@ yigitur-site/
 ├── .adminjs/           # AdminJS build dosyaları
 ├── .env.example        # Ortam değişkenleri örneği
 └── README.md
-
 
 ---
 
