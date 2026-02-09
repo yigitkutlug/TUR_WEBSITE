@@ -45,6 +45,7 @@ yigitur-site/
 ├── .adminjs/           # AdminJS build dosyaları
 ├── .env.example        # Ortam değişkenleri örneği
 └── README.md
+```
 
 ---
 
