@@ -141,6 +141,63 @@ Mail servis bilgileri `.env` içinden yönetilir.
 * Session secret ile admin oturum güvenliği
 
 ---
+## 📸 Uygulama Görselleri
+
+### 🏠 Ana Sayfa
+Uygulamanın ziyaretçilere açık ana sayfası.
+![Ana Sayfa](screenshots/ana_sayfa.png)
+
+---
+
+### 📝 Başvuru Formlarına Giriş
+Başvuru türlerinin listelendiği giriş ekranı.
+![Başvuru Formları Giriş](screenshots/Basvuru_form_giris.png)
+
+---
+
+### 📄 Başvuru Formları
+
+#### 👤 Personel Başvuru Formu
+![Personel Form](screenshots/Personel_Form.png)
+
+#### 🚗 Sürücü Başvuru Formu
+![Sürücü Form](screenshots/Surucu_Form.png)
+
+#### 🏢 Kurumsal Başvuru Formu
+![Kurumsal Başvuru Formu](screenshots/kurumsal_basvuru_Form.png)
+
+#### 📦 Taşeron Başvuru Formu
+![Taşeron Form](screenshots/Taseron_Form.png)
+
+---
+
+### 🔐 Admin Giriş Sayfası
+Admin paneline giriş ekranı.
+![Admin Giriş](screenshots/admin_giris.png)
+
+---
+
+### 🧑‍💼 Admin Panel
+Yönetim ve başvuruların kontrol edildiği admin paneli.
+![Admin Panel](screenshots/admin_panel.png)
+
+---
+
+### 📄 Belgelerimiz Sayfası
+![Belgelerimiz](screenshots/Belgelerimiz.png)
+
+---
+
+### 🤝 Referanslar
+![Bize Güvenen Referanslar](screenshots/Bize_guvenen_referans.png)
+
+---
+
+### 📞 İletişim Sayfası
+![İletişim](screenshots/Iletisim.png)
+
+---
+
 
 ## 📌 Notlar
 
