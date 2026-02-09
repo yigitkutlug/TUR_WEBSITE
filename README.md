@@ -1,4 +1,4 @@
-# TUR_WEBSITE
+# YİGİTUR
 
 Tur şirketleri için geliştirilmiş, Node.js tabanlı bir web uygulamasıdır.  
 Proje; web sitesi, admin paneli, mail gönderimi, form işlemleri ve güvenlik yapılarını içerir.
