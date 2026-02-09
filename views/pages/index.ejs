@@ -1,0 +1,207 @@
+<%- include("../partials/header") %>
+
+<section class="hero-image d-flex align-items-center justify-content-center text-center text-white">
+  <div class="container">
+    <h1 class="display-4 fw-bold text-shadow">Güvenli ve Zamanında Personel Taşımacılığı</h1>
+    <p class="lead text-shadow">Yigitur Tur ile kurumsal ulaşım çözümlerinde güveninizi taşıyoruz.</p>
+  <a  href="/basvurular#basvuru-formu" class="btn btn-outline-light btn-lg px-4 py-2">Hemen Başvurun</a>
+  </div>
+</section>
+<body class="home-page">
+
+
+
+
+<!-- NEDEN BİZ -->
+<section class="about bg-light py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold text-dark mb-5">Neden Yigitur Tur?</h2>
+    <div class="row align-items-center g-4">
+      
+      <!-- SOL YAZI -->
+      <div class="col-md-6">
+        <p class="mb-3">
+          Yigitur Tur, Türkiye genelinde personel taşımacılığı alanında uzmanlaşmış, sektördeki en güvenilir ulaşım çözümlerini sunan bir kuruluştur.
+          Kurumsal yapımız, geniş araç filomuz ve deneyimli kadromuzla, firmaların personel ulaşım ihtiyaçlarını en yüksek kalite standartlarında karşılıyoruz.
+        </p>
+        <p class="mb-3">
+          Modern teknolojileri takip eden sistem altyapımızla, servis süreçlerini dijitalleştiriyor; yolcu güvenliği, zaman yönetimi ve verimliliği esas alıyoruz.
+        </p>
+        <ul class="list-unstyled ps-3">
+          <li class="mb-2">🚌 <strong>Güvenli ve bakımlı araçlar:</strong> Düzenli bakımlı, yeni nesil konforlu taşıtlar</li>
+          <li class="mb-2">📍 <strong>Rota optimizasyonu:</strong> Zamanında varış için akıllı güzergâh planlama</li>
+          <li class="mb-2">📊 <strong>Dijital takip ve raporlama:</strong> Anlık konum takibi ve düzenli performans raporları</li>
+        </ul>
+      </div>
+
+      <!-- SAĞ GÖRSEL -->
+      <div class="col-md-6 text-center">
+        <img src="/images/otobus1.png" class="img-fluid rounded shadow-sm" alt="Personel Taşımacılığı">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- REFERANSLAR / LOGOLAR -->
+<section class="py-5" style="background-color: #004080; color: #ffffff;">
+  <h2 class="text-center mb-4 fw-bold">Bize Güvenen Kurumlar</h2>
+  <div class="logo-slider-wrapper">
+    <div class="logo-slider-track">
+      <% for(let i = 0; i < 2; i++) { logos.forEach(logo => { %>
+        <div class="logo-card">
+          <img src="<%= logo.url %>" alt="<%= logo.name %>">
+        </div>
+      <% }) } %>
+    </div>
+  </div>
+</section>
+
+
+<!-- KULLANDIĞIMIZ TEKNOLOJİLER -->
+<!-- KULLANDIĞIMIZ TEKNOLOJİLER -->
+<section class="py-5 bg-light border-top">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-4">Kullandığımız Teknolojiler</h2>
+    <p class="text-center text-muted mb-5" style="max-width: 800px; margin: 0 auto;">
+      Yigitur Tur olarak yalnızca fiziki taşıma değil, aynı zamanda dijital çözümlerle desteklenmiş entegre sistemler sunuyoruz.
+    </p>
+    <div class="row g-4">
+      <div class="col-md-4 d-flex">
+        <div class="w-100 text-center p-4 shadow-sm rounded bg-white d-flex flex-column align-items-center justify-content-center" style="min-height: 260px;">
+           <i class="bi bi-map-fill fs-1 text-info mb-3"></i>    
+          <h6 class="fw-bold">Canlı Araç Takibi</h6>
+          <p class="small text-muted mb-0">Araçlarımız anlık olarak takip edilir, lokasyon bildirimleri sağlanır.</p>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex">
+        <div class="w-100 text-center p-4 shadow-sm rounded bg-white d-flex flex-column align-items-center justify-content-center" style="min-height: 260px;">
+          <i class="bi bi-phone fs-1 text-success mb-3"></i>
+          <h6 class="fw-bold">Mobil Bildirim Sistemi</h6>
+          <p class="small text-muted mb-0">Personeller servis saatlerinde SMS veya uygulama üzerinden bilgilendirilir.</p>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex">
+        <div class="w-100 text-center p-4 shadow-sm rounded bg-white d-flex flex-column align-items-center justify-content-center" style="min-height: 260px;">
+          <i class="bi bi-bar-chart-line fs-1 text-warning mb-3"></i>
+          <h6 class="fw-bold">Dijital Raporlama</h6>
+          <p class="small text-muted mb-0">Aylık performans raporları ve güzergâh verileri PDF olarak sunulur.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HİZMETLER -->
+  <section class="py-5" style="background-color: #2D2D2D; color: #ffffff;">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold">Hizmetlerimiz</h2>
+
+    <div class="position-relative">
+      <div class="d-flex overflow-hidden" id="hizmetSlider">
+        <div class="hizmet-slider">
+
+          <!-- Kart 1 -->
+          <a href="/harita" class="hizmet-kart">
+            <img src="/images/personel.jpg" alt="Personel Servisi">
+            <h5>Personel Servisi</h5>
+            <p>Şirket çalışanlarınız için zamanında ve konforlu ulaşım hizmeti.</p>
+          </a>
+
+          <!-- Kart 2 -->
+          <a href="/harita" class="hizmet-kart">
+            <img src="/images/otobus1.png" alt="Filo Yönetimi">
+            <h5>Filo Yönetimi</h5>
+            <p>Geniş araç filomuzla ihtiyacınıza özel çözümler sunuyoruz.</p>
+          </a>
+
+          <!-- Kart 3 -->
+          <a href="/harita" class="hizmet-kart">
+            <img src="/images/ogrenci.jpg" alt="Öğrenci Servis Hizmeti">
+            <h5>Öğrenci Servis Hizmeti</h5>
+            <p>Öğrencilerin güvenli ulaşımı için rehberli ve denetimli servis çözümleri sunuyoruz.</p>
+          </a>
+
+          <!-- Kart 4 -->
+          <a href="/harita" class="hizmet-kart">
+            <img src="/images/gezi.jpg" alt="VIP Transfer">
+            <h5>VIP Transfer</h5>
+            <p>Yönetici ve özel misafirler için konforlu transfer çözümleri.</p>
+          </a>
+
+          <!-- Kart 5 -->
+          <a href="/harita" class="hizmet-kart">
+            <img src="/images/gezi.jpg" alt="Gezi & Organizasyon">
+            <h5>Gezi & Organizasyon</h5>
+            <p>Etkinlik, seminer ve sosyal organizasyon taşımalarında modern araçlarımızla yanınızdayız.</p>
+          </a>
+
+          <a href="/harita" class="hizmet-kart">
+            <img src="/images/sofor.png" alt="">
+            <h5>Şoför Temini</h5>
+            <p>Tecrübeli ve belgeli şoför kadromuz ile kısa ya da uzun vadeli hizmetler sunuyoruz.</p>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Oklar -->
+      <button class="hizmet-ok left" onclick="scrollSlider(-1)">
+        <i class="bi bi-chevron-left"></i>
+      </button>
+      <button class="hizmet-ok right" onclick="scrollSlider(1)">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  let scrollIndex = 0;
+  const slider = document.querySelector('#hizmetSlider > div');
+
+  function scrollSlider(direction) {
+    const cardWidth = 300;
+    scrollIndex += direction;
+    const maxIndex = slider.children.length - 4;
+    if (scrollIndex < 0) scrollIndex = 0;
+    if (scrollIndex > maxIndex) scrollIndex = maxIndex;
+    slider.style.transform = `translateX(-${scrollIndex * cardWidth}px)`;
+  }
+</script>
+
+<!-- SOSYAL SORUMLULUK -->
+<section class="about bg-light py-5">
+  <div class="container">
+ <div class="mb-3 d-flex justify-content-center">
+    <i class="bi bi-globe2 fs-1 text-success"></i>
+  </div>  
+
+    <h2 class="fw-bold text-center mb-4">Sosyal Sorumluluk</h2>
+    <p class="text-center text-dark mb-5" style="max-width: 800px; margin: 0 auto;">
+      Yigitur Tur olarak yalnızca hizmet verdiğimiz müşterilerimize değil, topluma da katkı sağlıyoruz.
+      Eğitim destekleri, çevreye duyarlı uygulamalar ve sosyal projelerde aktif rol alıyoruz.
+    </p>
+    <div class="row text-center">
+      <div class="col-md-6 mb-4">
+        <i class="bi bi-tree fs-1 text-success"></i>
+        <h5 class="fw-bold mt-3">Karbon Ayak İzi Azaltımı</h5>
+        <p class="text-center text-dark mb-5">Modern filomuzla yakıt tüketimini azaltıyor, çevreye duyarlı taşıma sağlıyoruz.</p>
+      </div>
+      <div class="col-md-6 mb-4">
+        <i class="bi bi-mortarboard-fill fs-1 text-primary"></i>
+        <h5 class="fw-bold mt-3">Eğitime Destek</h5>
+        <p class="text-center text-dark mb-5">İhtiyaç sahibi okullara servis desteği, burs ve ulaşım sponsorlukları sunuyoruz.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<%- include("../partials/footer") %>

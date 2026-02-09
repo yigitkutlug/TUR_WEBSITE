@@ -1,0 +1,123 @@
+<%- include("../../partials/header") %>
+
+<style>
+  body {
+    background: linear-gradient(135deg, #C2E9FB 0%, #A1C4FD 100%);
+    padding-top: 100px;
+    margin: 0;
+  }
+
+  .card-container {
+    width: 95%;
+    max-width: 1200px; /* yatayda büyütüldü */
+    background: #fff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    margin: 0 auto 80px auto;
+    flex-wrap: wrap;
+  }
+
+  .left-panel {
+    flex: 1;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-panel img {
+    max-width: 180px;
+    margin-bottom: 50px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+  }
+
+  .left-panel h1 {
+    font-weight: bold;
+    font-size: 28px;
+  }
+
+  .left-panel p {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+
+  .right-panel {
+    flex: 1;
+    padding: 40px;
+  }
+
+  .right-panel h3 {
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  .form-control {
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+
+  .btn-custom {
+    width: 100%;
+    border-radius: 8px;
+    background-color: #0072ff;
+    border: none;
+  }
+
+  @media (max-width: 768px) {
+    .card-container {
+      flex-direction: column;
+    }
+
+    .left-panel, .right-panel {
+      padding: 30px 20px;
+    }
+
+    .left-panel img {
+      max-width: 80px;
+    }
+  }
+</style>
+
+<div class="card-container">
+  <!-- SOL PANEL -->
+  <div class="left-panel">
+    <img src="/images/yigitur_logo22.png" alt="Yigitur Tur Logo"> <!-- LOGO BURADA -->
+    <h1>Başvurunu Başlat</h1>
+    <p>Yigitur Tur ailesine katılmak için formu doldur!</p>
+  </div>
+
+  <!-- SAĞ PANEL -->
+  <div class="right-panel">
+    <h3>Sürücü Başvuru Formu</h3>
+    <form action="/sofor-form" method="POST">
+      <div style="display: flex; gap: 10px;">
+  <input type="text" class="form-control" placeholder="Adınız" name="ad" required>
+  <input type="text" class="form-control" placeholder="Soyadınız" name="soyad" required>
+</div>
+      <input type="email" name="email" class="form-control" placeholder="E-posta adresiniz" required>
+      <input type="text" name="telefon" class="form-control" placeholder="Telefon Numaranız" required>
+      <input type="text" name="plaka" class="form-control" placeholder="Plaka No" required>
+      <input type="text" name="marka" class="form-control" placeholder="Aracınızın Markası" required>
+      <input type="text" name="model" class="form-control" placeholder="Aracınızın Modeli" required>
+      <input type="number" name="modelYili" class="form-control" placeholder="Aracınızın Model Yılı" required>
+      <input type="text" name="kapasite" class="form-control" placeholder="Aracınızın Kapasitesi" required>
+      <input type="text" name="adres" class="form-control" placeholder="Adresiniz" required>
+      <textarea name="mesaj" class="form-control" rows="3" placeholder="Mesajınız (isteğe bağlı)"></textarea>
+
+      <div class="form-check my-2">
+        <input type="checkbox" class="form-check-input" required>
+        <label class="form-check-label small">KVKK metnini okudum ve onaylıyorum.</label>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg btn-custom">Başvur</button>
+    </form>
+  </div>
+</div>
+
+<%- include("../../partials/footer") %>

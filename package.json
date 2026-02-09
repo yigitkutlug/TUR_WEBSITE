@@ -1,0 +1,35 @@
+{
+  "name": "yigitur-transport-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node app.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "adminjs",
+    "mongoose",
+    "corporate-website",
+    "demo-project"
+  ],
+  "author": "Yiğit",
+  "license": "ISC",
+  "description": "Corporate transport website developed by Yiğit (demo / portfolio project).",
+  "dependencies": {
+    "@adminjs/express": "^6.1.1",
+    "@adminjs/mongoose": "^4.1.0",
+    "adminjs": "^7.8.17",
+    "body-parser": "^2.2.0",
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "mongoose": "^8.16.0",
+    "nodemailer": "^7.0.5",
+    "node-fetch": "^3.3.2"
+  }
+}

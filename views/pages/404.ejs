@@ -1,0 +1,50 @@
+<%- include('../partials/header') %>
+
+<style>
+  .not-found-wrapper {
+    min-height: calc(100vh - 200px); /* header + footer yüksekliği kadar düşüyoruz */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .not-found-wrapper h1 {
+    font-size: 100px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+
+  .not-found-wrapper h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .not-found-wrapper p {
+    font-size: 22px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+
+  .not-found-wrapper a {
+    font-size: 20px;
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .not-found-wrapper a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<main class="not-found-wrapper">
+  <h1>404</h1>
+  <h2>Sayfa Bulunamadı</h2>
+  <p><strong><%= url %></strong> adresine ulaşılamıyor.</p>
+  <p><a href="/">Ana sayfaya dön</a></p>
+</main>
+
+<%- include('../partials/footer') %>

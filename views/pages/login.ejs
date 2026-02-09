@@ -1,0 +1,41 @@
+<%- include("../partials/header") %>
+
+<link rel="stylesheet" href="/css/style.css">
+
+<!-- Particles Container -->
+<div id="particles-js"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+  particlesJS.load('particles-js', '/js/particles.json', function () {
+    console.log('Particles.js yüklendi.');
+  });
+</script>
+
+
+<div class="login-wrapper">
+  <div class="login-card">
+    <h2>Yetkili Girişi</h2>
+
+    <% if (error) { %>
+      <div class="alert alert-danger text-center"><%= error %></div>
+    <% } %>
+
+    <form action="/login" method="POST">
+      <div class="mb-3">
+        <label for="username" class="form-label">Kullanıcı Adı</label>
+        <input type="text" class="form-control" name="username" placeholder="admin123" required>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Şifre</label>
+        <input type="password" class="form-control" name="password" placeholder="••••••••" required>
+      </div>
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary">Giriş Yap</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<%- include("../partials/footer") %> 

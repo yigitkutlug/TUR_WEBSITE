@@ -1,0 +1,142 @@
+<%- include("../../partials/header") %>
+
+<style>
+  body {
+    background: linear-gradient(135deg, #C2E9FB 0%, #A1C4FD 100%);
+    padding-top: 100px;
+    margin: 0;
+  }
+
+  .card-container {
+    width: 95%;
+    max-width: 1200px;
+    background: #fff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    margin: 0 auto 80px auto;
+    flex-wrap: wrap;
+  }
+
+  .left-panel {
+    flex: 1;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-panel img {
+    max-width: 180px;
+    margin-bottom: 50px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+  }
+
+  .left-panel h1 {
+    font-weight: bold;
+    font-size: 28px;
+  }
+
+  .left-panel p {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+
+  .right-panel {
+    flex: 1;
+    padding: 40px;
+  }
+
+  .right-panel h3 {
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  .form-control {
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+
+  .btn-custom {
+    width: 100%;
+    border-radius: 8px;
+    background-color: #0072ff;
+    border: none;
+  }
+
+  @media (max-width: 768px) {
+    .card-container {
+      flex-direction: column;
+    }
+
+    .left-panel, .right-panel {
+      padding: 30px 20px;
+    }
+
+    .left-panel img {
+      max-width: 80px;
+    }
+  }
+</style>
+
+<div class="card-container">
+  <!-- SOL PANEL -->
+  <div class="left-panel">
+    <img src="/images/yigitur_logo22.png" alt="Yigitur Tur Logo">
+    <h1>Başvurunu Başlat</h1>
+    <p>Yigitur Tur ailesine katılmak için personel başvuru formunu doldur!</p>
+  </div>
+
+  <!-- SAĞ PANEL -->
+  <div class="right-panel">
+    <h3>Personel Başvuru Formu</h3>
+    <form action="/personel-form" method="POST">
+     <div style="display: flex; gap: 10px;">
+  <input type="text" class="form-control" placeholder="Adınız" name="ad" required>
+  <input type="text" class="form-control" placeholder="Soyadınız" name="soyad" required>
+</div>
+      <input type="text" name="telefon" class="form-control" placeholder="Telefon" required>
+      <input type="email" name="email" class="form-control" placeholder="E-posta" required>
+      
+      <input type="date" name="dogumTarihi" class="form-control" placeholder="Doğum Tarihi" required>
+
+      <select name="cinsiyet" class="form-control" required>
+        <option value="">Cinsiyet</option>
+        <option value="Erkek">Erkek</option>
+        <option value="Kadın">Kadın</option>
+        <option value="Belirtmek istemiyorum">Belirtmek istemiyorum</option>
+      </select>
+
+      <input type="text" name="ikamet" class="form-control" placeholder="İkamet İl / İlçe" required>
+
+      <select name="egitim" class="form-control" required>
+        <option value="">Eğitim Durumu</option>
+        <option value="İlköğretim">İlköğretim</option>
+        <option value="Lise">Lise</option>
+        <option value="Önlisans">Önlisans</option>
+        <option value="Lisans">Lisans</option>
+        <option value="Yüksek Lisans">Yüksek Lisans</option>
+      </select>
+
+      <select name="calismaSekli" class="form-control" required>
+        <option value="">Çalışma Şekli</option>
+        <option value="Tam zamanlı">Tam zamanlı</option>
+        <option value="Yarı zamanlı">Yarı zamanlı</option>
+        <option value="Proje bazlı">Proje bazlı</option>
+      </select>
+
+      <input type="text" name="pozisyon" class="form-control" placeholder="Başvurulan Pozisyon">
+
+      <textarea name="mesaj" class="form-control" rows="4" placeholder="Mesaj (isteğe bağlı)"></textarea>
+
+      <button type="submit" class="btn btn-primary btn-lg btn-custom">Başvur</button>
+    </form>
+  </div>
+</div>
+
+<%- include("../../partials/footer") %>

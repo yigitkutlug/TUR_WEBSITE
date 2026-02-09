@@ -1,0 +1,218 @@
+<%- include("../partials/header") %>
+
+<!-- HERO -->
+<section class="text-white d-flex align-items-center" style="height: 450px; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('/images/ofis.jpg') center/cover no-repeat;">
+  <div class="container text-center">
+    <h1 class="display-5 fw-bold mb-3">Profesyonel Taşımacılığa İlk Adım</h1>
+    <p class="lead mb-4">Dakik, güvenli ve profesyonel taşımacılık için bir adım önde olun.</p>
+    <a  href="/basvurular#basvuru-formu" class="btn btn-outline-light btn-lg px-4 py-2">Hemen Başvurun</a>
+  </div>
+</section>
+
+<!-- HİZMETLER -->
+<!-- HİZMETLER -->
+<section id="cards" class="py-5 bg-light">
+  <div class="container">
+     <h2 class="text-center fw-bold text-dark mb-5">Hizmetlerimiz</h2>
+    <div class="row g-4">
+
+      <% const hizmetler = [
+        { title: "Personel Taşımacılığı", desc: "Kurumsal firmalara özel, güvenli ve konforlu personel taşıma hizmeti sunuyoruz.", img: "otobus1.png", icon: "bi-people-fill" },
+        { title: "Öğrenci Servis Hizmeti", desc: "Öğrencilerin güvenli ulaşımı için rehberli ve denetimli servis çözümleri sunuyoruz.", img: "ogrenci.jpg", icon: "bi-bus-front" },
+        { title: "VIP Taşıma", desc: "Yöneticiler ve özel misafirleriniz için prestijli ve konforlu taşıma çözümleri sağlıyoruz.", img: "otobus1.png", icon: "bi-star-fill" },
+        { title: "Gezi & Organizasyon", desc: "Etkinlik, seminer ve sosyal organizasyon taşımalarında modern araçlarımızla yanınızdayız.", img: "gezi.jpg", icon: "bi-calendar-check" },
+        { title: "Şoför Temini", desc: "Tecrübeli ve belgeli şoför kadromuz ile kısa ya da uzun vadeli hizmetler sunuyoruz.", img: "sofor.png", icon: "bi-person-badge" },
+        { title: "Filo Kiralama", desc: "Sürücülü ya da sürücüsüz filo kiralama seçeneklerimizle işinize özel çözümler sunuyoruz.", img: "otobus1.png", icon: "bi-truck-front" }
+      ]; %>
+
+      <% hizmetler.forEach(h => { %>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-lg border-0 rounded overflow-hidden">
+          <div class="position-relative">
+            <img src="/images/<%= h.img %>" class="card-hizmet-img" alt="<%= h.title %>">
+            <i class="bi <%= h.icon %> position-absolute top-0 end-0 m-3 text-white bg-primary p-2 rounded-circle fs-5 shadow"></i>
+          </div>
+          <div class="card-body">
+            <h5 class="fw-bold text-primary"><%= h.title %></h5>
+            <p class="text-muted"><%= h.desc %></p>
+            <a href="/iletisim" class="btn btn-outline-primary btn-sm mt-2">Detaylı Bilgi</a>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- NEDEN BİZ -->
+<section class="py-4 text-white" style="background: linear-gradient(to right, #002244, #005599);">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">Neden Yigiturtur Taşımacılık?</h2>
+    <div class="row text-center g-3">
+      <div class="col-md-4">
+        <div class="bg-white text-dark rounded p-3 shadow-sm h-100 d-flex flex-column justify-content-center align-items-center" style="min-height: 200px;">
+          <i class="bi bi-shield-check fs-2 text-primary mb-2"></i>
+          <h6 class="fw-bold mb-1">Üst Düzey Güvenlik</h6>
+          <p class="small mb-0">Denetimli sürücüler, yeni nesil araçlar ve araç içi takip sistemleriyle %100 güvenli taşımacılık.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="bg-white text-dark rounded p-3 shadow-sm h-100 d-flex flex-column justify-content-center align-items-center" style="min-height: 200px;">
+          <i class="bi bi-clock-history fs-2 text-warning mb-2"></i>
+          <h6 class="fw-bold mb-1">Dakiklik Garantisi</h6>
+          <p class="small mb-0">Zamanında kalkış, zamanında varış. Güzergah planlamamızla her sabah işler aksamaz.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="bg-white text-dark rounded p-3 shadow-sm h-100 d-flex flex-column justify-content-center align-items-center" style="min-height: 200px;">
+          <i class="bi bi-award fs-2 text-success mb-2"></i>
+          <h6 class="fw-bold mb-1">Kurumsal Kalite</h6>
+          <p class="small mb-0">ISO belgeleri, referanslı hizmetler ve profesyonel sürücü kadrosu ile sektörde örnek oluyoruz.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HİZMET BÖLGELERİMİZ -->
+<section class="py-5 bg-white">
+  <div class="container">
+     <h2 class="text-center fw-bold text-dark mb-5">Hizmet Bölgelerimiz</h2>
+    <p class="text-center text-muted mb-5" style="max-width: 800px; margin: 0 auto;">
+      Yigitur Tur olarak Türkiye’nin dört bir yanına ulaşan geniş servis ağımızla hizmet vermekteyiz. Harita üzerinden hizmet sunduğumuz bölgeleri inceleyebilir ve bölgenize uygun çözümlerimizi keşfedebilirsiniz.
+    </p>
+    <div class="text-center">
+      <img src="/images/gezi.jpg" alt="Hizmet Bölgeleri Haritası" class="img-fluid shadow rounded" style="max-height: 500px;">
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- BAŞVURU / CTA -->
+<section class="py-5 text-center" style="background-color: #2D2D2D; color: #ffffff;">
+  <div class="container">
+    <h2 class="fw-bold mb-3">Türkiye Genelinde Profesyonel Taşımacılık</h2>
+    <p class="lead mb-4">İster personel taşıyın ister filo kiralayın, hepsi Yigiturtur ile mümkün. Bizimle iletişime geçin ve hemen güzergâhınızı oluşturalım.</p>
+    <a href="/basvurular#cards" class="btn btn-outline-light btn-lg px-4 py-2">Hemen Başvurun</a>
+  </div>
+</section>
+
+<!-- MÜŞTERİ YORUMLARI -->
+<section class="py-5" style="background-color: #f4f7fa;">
+  <div class="container">
+   <h2 class="text-center fw-bold text-dark mb-5">Müşteri Yorumları</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="p-4 rounded h-100 shadow bg-white border-start border-5 border-primary">
+          <p class="fs-5 text-dark">“Sistemli, düzenli, güvenli. Uzun zamandır böyle bir taşımacılık hizmeti almamıştık.”</p>
+          <hr />
+          <strong class="text-muted">– Ayşe T. / İnsan Kaynakları Müdürü</strong>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 rounded h-100 shadow bg-white border-start border-5 border-info">
+          <p class="fs-5 text-dark">“Tüm organizasyon taşımalarımızı Yigiturtur’a devrettik. Hiç pişman olmadık.”</p>
+          <hr />
+          <strong class="text-muted">– Mehmet K. / Etkinlik Sorumlusu</strong>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 rounded h-100 shadow bg-white border-start border-5 border-success">
+          <p class="fs-5 text-dark">“Okul servisi konusunda hem çocuklar hem veliler memnun. Uygulama harika.”</p>
+          <hr />
+          <strong class="text-muted">– Elif B. / Öğrenci Velisi</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HEDEFLERİMİZ -->
+<section class="py-5" style="background-color: #004080; color: #ffffff;">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">Hedeflerimiz</h2>
+    <div class="row g-4 text-center">
+      <div class="col-md-6">
+        <div class="bg-white text-dark rounded p-4 shadow-sm h-100">
+          <i class="bi bi-bullseye fs-1 text-success mb-3"></i>
+          <h4 class="fw-bold">Misyonumuz</h4>
+          <p>Türkiye genelinde güvenli, dakik ve konforlu ulaşımı herkese ulaştırmak.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="bg-white text-dark rounded p-4 shadow-sm h-100">
+          <i class="bi bi-binoculars fs-1 text-primary mb-3"></i>
+          <h4 class="fw-bold">Vizyonumuz</h4>
+          <p>Taşımacılık sektöründe dijitalleşme ve müşteri memnuniyetinde lider olmak.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERİ -->
+<!-- GALERİ -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center fw-bold text-dark mb-5">Galerimiz</h2>
+    <div class="row g-4">
+      <% 
+        const galeriler = ["galeri1.jpg", "galeri2.jpg", "galeri3.jpg", "galeri4.jpg", "galeri5.jpg", "galeri6.jpg"];
+        const basliklar = [
+          "Kurucularımız ve İlk Araçlarımız",
+          "Merkez Ofisimizden Görüntüler",
+          "Araç Filomuz",
+          "Hürriyet Gazetesi Haberi",
+          "Yigiturtur Logosu",
+          "Sabah Gazetesi Haberi"
+        ]; 
+      %>
+      <% galeriler.forEach((g, i) => { %>
+        <div class="col-md-4">
+          <div class="rounded overflow-hidden shadow-sm position-relative gallery-card">
+            <!-- Lightbox için anchor ile sar -->
+            <a href="/images/<%= g %>" 
+               class="glightbox" 
+               data-gallery="galeri1" 
+               data-title="<%= basliklar[i] %>">
+              <img src="/images/<%= g %>" 
+                   class="img-fluid rounded gallery-img" 
+                   alt="<%= basliklar[i] %>" 
+                   loading="lazy">
+            </a>
+            <div class="position-absolute bottom-0 w-100 text-center text-white bg-dark bg-opacity-50 py-1">
+              <%= basliklar[i] %>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  const lightbox = GLightbox({
+    selector: '.glightbox',
+    touchNavigation: true,
+    loop: true,
+    zoomable: true
+  });
+</script>
+
+<style>
+  .gallery-card { transition: transform .2s ease, box-shadow .2s ease; }
+  .gallery-card:hover { transform: translateY(-3px); box-shadow: 0 0.75rem 1.5rem rgba(0,0,0,.15); }
+</style>
+
+
+
+<!-- GALERİ STİLİ -->
+<%- include("../partials/footer") %>
